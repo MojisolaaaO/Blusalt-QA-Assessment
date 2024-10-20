@@ -1,0 +1,19 @@
+{
+  "name": "blusalt-qa-assessment",
+  "version": "1.0.0",
+  "description": "This repository contains automated test scripts designed to validate the following functionalities of [UI Test Automation Playground](https://www.uitestingplayground.com/): - Client Side Delay - Dynamic Table - Sample App - Shadow DOM - Alerts - File Upload",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.15.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3"
+  }
+}
