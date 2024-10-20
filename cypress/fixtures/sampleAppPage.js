@@ -18,8 +18,9 @@ class SampleAppPage {
     }
 
     welcomeText() {
-        cy.get("#loginstatus").contains(/Welcome, \w+!/)
+        cy.get("#loginstatus").invoke('text').should('match', /Welcome, \w+!/);
     }
+
 }
 
 export default SampleAppPage

@@ -16,7 +16,7 @@ When('I click the button', () => {
 })
 
 
-Then('data should appear afer 15 seconds', () => {
+Then('data should appear after 15 seconds', () => {
     cy.wait(15000)
-    clientSidePage.successText()
+    clientSidePage.successText('Data calculated on the client side.')
 });

@@ -11,9 +11,10 @@ class ClientSidePage {
         cy.get("#ajaxButton").click()
     }
 
-    successText() {
-        cy.get('.bg-success').contains('Data calculated on the client side.')
+    successText(expectedText) {
+        cy.get(".bg-success").should('contain', expectedText);
     }
+
 }
 
 export default ClientSidePage
