@@ -1,0 +1,31 @@
+name: bdd-tests
+
+on:
+  push
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: './package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./
+        run: npm ci 
+
+      - name: Start application
+        working-directory: ./
+        run: npm start &  
+
+      - name: Run Cypress BDD tests
+        working-directory: ./  
+        run: npx cypress run
