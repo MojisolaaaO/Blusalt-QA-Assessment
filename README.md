@@ -43,7 +43,7 @@ npx cypress open
 ```
 2. Select E2E Testing
 3. Select a browser (e.g Chrome)
-4. Click on the "Select E2E Testing in <browser>" button
+4. Click on the "Select E2E Testing in < browser >" button
 5. Select a spec file
 
 ### Headless Mode
