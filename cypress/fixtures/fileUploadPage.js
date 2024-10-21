@@ -1,15 +1,15 @@
 class FileUploadPage {
     visit() {
-        cy.visit("/")
+        return cy.visit("/")
     }
 
     fileUpload() {
-        cy.get("a[href='/upload']").click()
+        return cy.get("a[href='/upload']").click()
 
     }
 
     dragAndDrop() {
-        cy.xpath("//iframe[@src='/static/upload.html']")
+        return cy.xpath("//iframe[@src='/static/upload.html']")
             .its('0.contentDocument.body')
             .should('not.be.empty')
             .then(cy.wrap)
@@ -18,7 +18,7 @@ class FileUploadPage {
     }
 
     fileSelected() {
-        cy.xpath("//iframe[@src='/static/upload.html']")
+        return cy.xpath("//iframe[@src='/static/upload.html']")
             .its('0.contentDocument.body')
             .should('not.be.empty')
             .then(cy.wrap)

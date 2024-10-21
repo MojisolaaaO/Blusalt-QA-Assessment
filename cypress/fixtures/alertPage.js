@@ -1,18 +1,18 @@
 class AlertPage {
     visit() {
-        cy.visit("/")
+        return cy.visit("/")
     }
 
     Alerts() {
-        cy.get("a[href='/alerts']").click()
+        return cy.get("a[href='/alerts']").click()
     }
 
     alertBtn() {
-        cy.get("#alertButton").click()
+        return cy.get("#alertButton").click()
     }
 
     alertText() {
-        cy.on('window:alert', (alertText) => {
+        return cy.on('window:alert', (alertText) => {
             expect(alertText).to.equal("Today is a working day.\nOr less likely a holiday.")
         })
     }

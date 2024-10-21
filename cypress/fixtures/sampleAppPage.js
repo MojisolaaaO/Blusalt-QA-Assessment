@@ -1,24 +1,24 @@
 class SampleAppPage {
     visit() {
-        cy.visit("/")
+        return cy.visit("/")
     }
     sampleApp() {
-        cy.get("a[href='/sampleapp']").click()
+        return cy.get("a[href='/sampleapp']").click()
     }
     username(name) {
-        cy.get("input[name='UserName']").type(name)
+        return cy.get("input[name='UserName']").type(name)
     }
 
     password(password) {
-        cy.get("input[name='Password']").type(password)
+        return cy.get("input[name='Password']").type(password)
     }
 
     loginBtn() {
-        cy.get("#login").click()
+        return cy.get("#login").click()
     }
 
     welcomeText() {
-        cy.get("#loginstatus").invoke('text').should('match', /Welcome, \w+!/);
+        return cy.get("#loginstatus").invoke('text').should('match', /Welcome, \w+!/);
     }
 
 }

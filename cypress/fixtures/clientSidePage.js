@@ -1,18 +1,18 @@
 class ClientSidePage {
     visit() {
-        cy.visit("/")
+        return cy.visit("/")
     }
 
     clientDelay() {
-        cy.get("a[href = '/clientdelay']").click()
+        return cy.get("a[href = '/clientdelay']").click()
     }
 
     button() {
-        cy.get("#ajaxButton").click()
+        return cy.get("#ajaxButton").click()
     }
 
     successText(expectedText) {
-        cy.get(".bg-success").should('contain', expectedText);
+        return cy.get(".bg-success").should('contain', expectedText);
     }
 
 }
